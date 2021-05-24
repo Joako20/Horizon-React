@@ -1,0 +1,116 @@
+/*contenido*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*secciones propias*/
+.sec_index{
+    width: 1300px;
+    .sec_index_title{
+        margin-bottom: 20px;
+        h2{
+            font-family: 'goodtime';
+            color: $secondary-color;
+        }
+        p{
+            font-family: 'Poppins';
+            color: $tertiary-color; 
+        }
+        
+    }
+}
+
+.catalogo_row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card{
+        margin-right: 23px;
+    }
+    
+
+}
+/*secciones tematicas*/
+.sec_console{
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/horizon-eeb53.appspot.com/o/Img%2Fpsfondo.jpg?alt=media&token=c32ee737-db07-461e-86c1-7f90de1118cf);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 40vw;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mid1{
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mid2{
+        @extend .mid1;
+    }
+    .mid3{
+        @extend .mid1;
+    }
+    
+
+}
+.sec_console-xbox{
+    @extend .sec_console;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/horizon-eeb53.appspot.com/o/Img%2Fxbox.jpg?alt=media&token=25a6cb61-e25d-4298-a1f2-ef9fbb3c7590);
+    margin-bottom: 0px;
+}
+.sec_console{ .swiper-button-prev,.swiper-button-next{
+    color: $psblue-color;
+}}
+.sec_console-xbox{.swiper-button-prev,.swiper-button-next{
+    color: $xboxgreen-color;
+}
+}
+
+
+@media (max-width: 1338px){
+    .sec_index{
+        width: 100vw;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 1205px){
+    .sec_console,.sec_console-xbox{
+        height: 500px;
+    }
+    
+}
+@media (max-width: 669px){
+    .sec_console{
+        .mid1{
+            display: none;
+        }
+        .mid2{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 979px){
+    .sec_console-xbox{
+        .mid1{
+            display: none;
+        }
+        .mid2{
+            display: none;
+        }
+        .mid1{
+            display: none;
+        }
+        .mid2{
+            display: none;
+        }
+    }
+}
